@@ -1,25 +1,81 @@
 aid: cascadedebt-com
+
 name: Cascade
-description: 'Cascade is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by bonfire-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Cascade Debt provides a precision asset‑based finance platform that streamlines institutional debt access. The web‑based solution simplifies lending processes, offering faster onboarding, transparent terms, and automated workflows for both lenders and borrowers. By leveraging modern technology, Cascade aims to reduce friction in capital markets and empower businesses to secure financing efficiently.'
+
 url: https://raw.githubusercontent.com/api-evangelist/cascadedebt-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
+image: https://cdn.prod.website-files.com/66a2515470d3ed7f7117dbea/66c497613fa009537a4c63a0_Cascade%20-%20Rebrand.png
+
 tags:
 - Company
-apis: []
+- Finance
+- AssetBased
+- Lending
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- bonfire-ventures
+
 common:
+- type: Hosts
+  url: hosts/cascadedebt-com-hosts.yml
+- type: Vendors
+  url: vendors/cascadedebt-com-vendors.yml
+- type: TermsOfService
+  url: https://www.cascadedebt.com/tos
+- type: Security
+  url: https://www.cascadedebt.com/security
+- type: PrivacyPolicy
+  url: https://www.cascadedebt.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/cascadedebt
+- type: DomainSecurity
+  url: security/cascadedebt-com-domain-security.yml
 - type: Website
   url: https://cascadedebt.com
+- type: Documentation
+  url: https://www.cascadedebt.com/about-us
+- type: Support
+  url: https://support.cascadedebt.com/tickets
+- type: Blog
+  url: https://www.cascadedebt.com/insights
+- type: StatusPage
+  url: https://status.cascadedebt.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The Cascade website serves HTML with JavaScript rendering and provides no machine‑readable OpenAPI spec.
+  evidence:
+    - url: https://www.cascadedebt.com
+      status: 200
+  checked: '2026-10-22'
+
+x-backed-by:
+- bonfire-ventures
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

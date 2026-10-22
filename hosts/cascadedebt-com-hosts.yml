@@ -1,0 +1,128 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 8
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - other
+  - source
+  - status
+  - support
+  - website
+hosts:
+- host: api.cascadedebt.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: cascadedebt.com
+  role: api
+  relation: own
+- host: app.cascadedebt.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cascadedebt.com
+  role: other
+  relation: own
+- host: cascadedebt.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: cascadedebt.com
+  role: website
+  relation: own
+- host: get.cascadedebt.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: cascadedebt.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: knowledgebase.cascadedebt.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cascadedebt.com
+  role: other
+  relation: own
+- host: status.cascadedebt.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: cascadedebt.com
+  role: status
+  relation: own
+- host: support.cascadedebt.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - hosting
+  vendor: hubspot
+  registrable_domain: cascadedebt.com
+  role: support
+  relation: own
+- host: www.cascadedebt.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - TermsOfService
+  - Security
+  - PrivacyPolicy
+  - Documentation
+  - Blog
+  serves: []
+  registrable_domain: cascadedebt.com
+  role: docs
+  relation: own
